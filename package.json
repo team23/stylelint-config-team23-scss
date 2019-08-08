@@ -8,11 +8,11 @@
     "scss",
     "team23"
   ],
-  "author": "stylelint",
+  "author": "TEAM23",
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/stylelint/stylelint-config-standard.git"
+    "url": "https://git.team23.de/mmunz/stylelint-config-team23-scss"
   },
   "main": "index.js",
   "files": [
