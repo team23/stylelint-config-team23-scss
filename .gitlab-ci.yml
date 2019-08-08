@@ -9,7 +9,7 @@ before_script:
 stages:
   - test
 
-job_name:
+test:
   stage: test
   script:
     - npm test
