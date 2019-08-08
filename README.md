@@ -5,5 +5,5 @@
 Extends [`stylelint-config-recommended`](https://github.com/stylelint/stylelint-config-recommended).
 
 Used plugins:
- - [`stylelint-scss`](https://github.com/kristerkari/stylelint-scss).
+  -[`stylelint-scss`](https://github.com/kristerkari/stylelint-scss).
 

@@ -83,7 +83,7 @@ describe("flags warnings with invalid css", () => {
     return result.then(
       data => (
         expect(data.results[0].warnings[0].line).toBe(1),
-        expect(data.results[0].warnings[1].line).toBe(2)
+        expect(data.results[0].warnings[1].line).toBe(3)
       )
     )
   })

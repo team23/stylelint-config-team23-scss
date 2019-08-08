@@ -19,7 +19,7 @@
     "index.js"
   ],
   "dependencies": {
-    "stylelint-config-recommended": "^2.2.0",
+    "stylelint-config-team23-standard": "git+https://git.team23.de/mmunz/stylelint-config-team23-standard.git",
     "stylelint-scss": "^3.9.3"
   },
   "devDependencies": {

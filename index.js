@@ -1,7 +1,7 @@
 "use strict"
 
 module.exports = {
-  "extends": "stylelint-config-recommended",
+  "extends": "stylelint-config-team23-standard",
   "plugins": [
     "stylelint-scss"
   ],
