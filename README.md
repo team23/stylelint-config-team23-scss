@@ -4,7 +4,7 @@
 
 Rules for linting SCSS at TEAM23 with stylelint.  
 
-Extends [`stylelint-config-team23-standard`](https://git.team23.de/mmunz/stylelint-config-team23-standard), which
+Extends [`stylelint-config-team23-standard`](https://github.com/team23/stylelint-config-team23-standard), which
 enables error checking and a lot of stylistic rules based on best practices.
 
 Used plugins:
@@ -21,7 +21,7 @@ For proposing changes to the ruleset please open either
 ## Installation
 
 ```bash
-npm install git+https://git.team23.de/mmunz/stylelint-config-team23-scss.git --save-dev
+npm install git+https://github.com/team23/stylelint-config-team23-scss --save-dev
 ```
 
 ## Usage
