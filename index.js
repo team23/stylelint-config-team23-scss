@@ -7,8 +7,8 @@ module.exports = {
   ],
   "rules": {
     "at-rule-no-unknown": null,
+    "at-rule-disallowed-list": ["debug"],
     "scss/at-rule-no-unknown": true,
-    "at-rule-blacklist": ["debug"],
     "scss/at-each-key-value-single-line": true,
     "scss/at-extend-no-missing-placeholder": true,
     "scss/at-function-pattern": "^[a-z]+([a-z0-9-]+[a-z0-9]+)?$",
