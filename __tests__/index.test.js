@@ -56,7 +56,7 @@ describe("flags warnings with invalid css", () => {
     return result.then(
       data => (
         expect(data.results[0].warnings[0].text).toBe("Unexpected unknown at-rule \"@invalid\" (at-rule-no-unknown) (scss/at-rule-no-unknown)"),
-        expect(data.results[0].warnings[1].text).toBe("Unexpected at-rule \"debug\" (at-rule-blacklist)")
+        expect(data.results[0].warnings[1].text).toBe("Unexpected at-rule \"debug\" (at-rule-disallowed-list)")
       )
     )
   })
@@ -65,7 +65,7 @@ describe("flags warnings with invalid css", () => {
     return result.then(
       data => (
         expect(data.results[0].warnings[0].rule).toBe("scss/at-rule-no-unknown"),
-        expect(data.results[0].warnings[1].rule).toBe("at-rule-blacklist")
+        expect(data.results[0].warnings[1].rule).toBe("at-rule-disallowed-list")
       )
     )
   })
