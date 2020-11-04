@@ -19,7 +19,7 @@
     "index.js"
   ],
   "dependencies": {
-    "stylelint-config-team23-standard": "git+https://github.com/team23/stylelint-config-team23-standard.git#dev",
+    "stylelint-config-team23-standard": "git+https://github.com/team23/stylelint-config-team23-standard.git",
     "stylelint-scss": "^3.18.0"
   },
   "devDependencies": {
