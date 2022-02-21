@@ -24,10 +24,9 @@
 
 - by adding `stylelint-config-prettier-scss`, all rules that might conflict with prettier are disabled.
 
-- removed duplicate rules as they are provided by `stylelint-config-standard-scss`:
+- removed duplicate rules as they are provided by an extended config:
 
 ```js
-"at-rule-no-unknown": null,
 "at-rule-disallowed-list": ["debug"],
 'scss/at-rule-no-unknown': true,
 'scss/at-extend-no-missing-placeholder': true,
