@@ -35,6 +35,12 @@
 'scss/dollar-variable-colon-space-before': 'never',
 ```
 
+- adds to support `lighten()` and `darken()` functions:
+
+```js
+'function-no-unknown': [true, { ignoreFunctions: ['lighten', 'darken'] }],
+```
+
 # 0.1.0
 
 - Initial release based on stylelint-config-standard. Add stylelint-scss plugin and a set of custom rules.
