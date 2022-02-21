@@ -1,6 +1,6 @@
 {
   "name": "stylelint-config-team23-scss",
-  "version": "1.0.0-rc3",
+  "version": "1.0.0-rc4",
   "description": "Standard shareable config for stylelint",
   "keywords": [
     "stylelint",
@@ -21,7 +21,7 @@
   "dependencies": {
     "stylelint-config-prettier-scss": "^0.0.1",
     "stylelint-config-standard-scss": "^3.0.0",
-    "stylelint-config-team23-standard": "github:team23/stylelint-config-team23-standard#v1.0.0-rc5"
+    "stylelint-config-team23-standard": "github:team23/stylelint-config-team23-standard#v1.0.0-rc6"
   },
   "devDependencies": {
     "@stylelint/prettier-config": "^2.0.0",
@@ -32,10 +32,12 @@
     "eslint-plugin-jest": "^25.2.4",
     "eslint-plugin-node": "^11.1.0",
     "eslint-plugin-regexp": "^1.5.0",
+    "husky": "^7.0.4",
     "jest": "^27.3.1",
     "np": "^7.6.0",
     "npm-run-all": "^4.1.5",
     "prettier": "^2.4.1",
+    "pretty-quick": "^3.1.3",
     "remark-cli": "^10.0.1",
     "stylelint": "^14.5.1"
   },
@@ -49,7 +51,9 @@
     "lint:md": "remark . --quiet --frail --ignore-path .gitignore",
     "lint": "npm-run-all --parallel lint:*",
     "test": "jest",
-    "watch": "jest --watch"
+    "watch": "jest --watch",
+    "prepare": "husky install",
+    "pretty-quick": "pretty-quick"
   },
   "prettier": "@stylelint/prettier-config",
   "eslintConfig": {

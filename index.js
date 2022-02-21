@@ -2,15 +2,20 @@
 
 module.exports = {
 	extends: [
-    'stylelint-config-standard-scss',
+		'stylelint-config-standard-scss',
 		'stylelint-config-prettier-scss',
 		'stylelint-config-team23-standard',
 	],
 	rules: {
-    /**
-     * Disallow unknown at-rules.
-     */
-    "at-rule-no-unknown": null,
+		/**
+		 * Disallow unknown functions.
+		 */
+		'function-no-unknown': [true, { ignoreFunctions: ['lighten', 'darken'] }],
+
+		/**
+		 * Disallow unknown at-rules.
+		 */
+		'at-rule-no-unknown': null,
 
 		/**
 		 * This is a rule that checks for situations where users have done a loop using map-keys or map.keys and grabbed the value for that key inside of the loop.

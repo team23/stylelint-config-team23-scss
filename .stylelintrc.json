@@ -1,11 +1,11 @@
 {
-  "extends": [
-    "stylelint-config-standard-scss",
+	"extends": [
+		"stylelint-config-standard-scss",
 		"stylelint-config-prettier-scss",
 		"stylelint-config-team23-standard"
 	],
 	"rules": {
-    "at-rule-no-unknown": null,
+		"at-rule-no-unknown": null,
 		"scss/at-each-key-value-single-line": true,
 		"scss/at-function-pattern": "^[a-z]+([a-z0-9-]+[a-z0-9]+)?$",
 		"scss/at-import-no-partial-leading-underscore": true,
