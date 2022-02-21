@@ -1,6 +1,6 @@
 {
   "name": "stylelint-config-team23-scss",
-  "version": "1.0.0-rc4",
+  "version": "1.0.0-rc6",
   "description": "Standard shareable config for stylelint",
   "keywords": [
     "stylelint",
@@ -21,7 +21,7 @@
   "dependencies": {
     "stylelint-config-prettier-scss": "^0.0.1",
     "stylelint-config-standard-scss": "^3.0.0",
-    "stylelint-config-team23-standard": "github:team23/stylelint-config-team23-standard#v1.0.0-rc6"
+    "stylelint-config-team23-standard": "github:team23/stylelint-config-team23-standard#v1.0.0-rc7"
   },
   "devDependencies": {
     "@stylelint/prettier-config": "^2.0.0",
