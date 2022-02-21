@@ -1,22 +1,19 @@
 # stylelint-config-team23-scss
 
-> Standard SCSS config for TEAM23
+> Standard SCSS linting config for TEAM23
 
-Rules for linting SCSS at TEAM23 with stylelint.  
+Rules for linting SCSS at TEAM23 with stylelint.
 
 Extends [`stylelint-config-team23-standard`](https://github.com/team23/stylelint-config-team23-standard), which
-enables error checking and a lot of stylistic rules based on best practices.
-
-Used plugins:
-
--   [`stylelint-scss`](https://github.com/kristerkari/stylelint-scss).
+enables css error checking based on best practices. It further extends [`stylelint-config-standard-scss`](https://github.com/stylelint-scss/stylelint-config-standard-scss) which enables scss error checking plus some style checking rules. the stylechecking rules are disabled by also extending [`stylelint-config-prettier-scss`](https://github.com/prettier/stylelint-config-prettier-scss). Our custom ruleset is defined in the
+[`index.js`](./index.js).
 
 ## Proposing rule changes
 
 For proposing changes to the ruleset please open either
 
--   a merge request
--   a ticket
+- a merge request
+- a ticket
 
 ## Installation
 
