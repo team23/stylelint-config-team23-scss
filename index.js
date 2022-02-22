@@ -8,14 +8,24 @@ module.exports = {
 	],
 	rules: {
 		/**
-		 * Disallow unknown functions.
-		 */
-		'function-no-unknown': [true, { ignoreFunctions: ['lighten', 'darken'] }],
-
-		/**
 		 * Disallow unknown at-rules.
 		 */
 		'at-rule-no-unknown': null,
+
+		/**
+		 * Require or disallow parentheses in argumentless @mixin calls.
+		 */
+		'scss/at-mixin-argumentless-call-parentheses': null,
+
+		/**
+		 * Disallows the use of global function names, as these global functions are now located inside built-in Sass modules.
+		 */
+		'scss/no-global-function-names': null,
+
+		/**
+		 * Disallow parentheses in conditional @ rules (if, elsif, while)
+		 */
+		'scss/at-rule-conditional-no-parentheses': null,
 
 		/**
 		 * This is a rule that checks for situations where users have done a loop using map-keys or map.keys and grabbed the value for that key inside of the loop.

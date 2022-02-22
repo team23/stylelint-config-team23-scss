@@ -35,10 +35,12 @@
 'scss/dollar-variable-colon-space-before': 'never',
 ```
 
-- adds to support `lighten()` and `darken()` functions:
+- added these rules:
 
 ```js
-'function-no-unknown': [true, { ignoreFunctions: ['lighten', 'darken'] }],
+'scss/at-mixin-argumentless-call-parentheses': null,
+'scss/no-global-function-names': null,
+'scss/at-rule-conditional-no-parentheses': null,
 ```
 
 # 0.1.0
