@@ -13,6 +13,11 @@ module.exports = {
 		'at-rule-no-unknown': null,
 
 		/**
+		 * Disallow unknown functions.
+		 */
+		'function-no-unknown': null,
+
+		/**
 		 * Require or disallow parentheses in argumentless @mixin calls.
 		 */
 		'scss/at-mixin-argumentless-call-parentheses': null,

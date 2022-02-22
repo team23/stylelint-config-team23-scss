@@ -38,6 +38,7 @@
 - added these rules:
 
 ```js
+'function-no-unknown': null,
 'scss/at-mixin-argumentless-call-parentheses': null,
 'scss/no-global-function-names': null,
 'scss/at-rule-conditional-no-parentheses': null,
