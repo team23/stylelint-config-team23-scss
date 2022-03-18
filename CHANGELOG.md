@@ -1,3 +1,8 @@
+# 1.0.1
+
+- updates `stylelint` to version 14.6.0
+- updates `stylelint-config-team23-standard` to version 1.0.1
+
 # 1.0.0
 
 ## Dependencies
