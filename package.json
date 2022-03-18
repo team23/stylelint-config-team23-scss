@@ -1,6 +1,6 @@
 {
   "name": "stylelint-config-team23-scss",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Standard shareable config for stylelint",
   "keywords": [
     "stylelint",
