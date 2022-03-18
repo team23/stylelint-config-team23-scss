@@ -21,7 +21,7 @@
   "dependencies": {
     "stylelint-config-prettier-scss": "^0.0.1",
     "stylelint-config-standard-scss": "^3.0.0",
-    "stylelint-config-team23-standard": "github:team23/stylelint-config-team23-standard#v1.0.0-rc9"
+    "stylelint-config-team23-standard": "github:team23/stylelint-config-team23-standard#v1.0.1"
   },
   "devDependencies": {
     "@stylelint/prettier-config": "^2.0.0",
