@@ -6,7 +6,7 @@
 - added `stylelint-config-standard-scss` dependency
 - added `stylelint-config-prettier-scss` dependency
 - updated `stylelint-config-team23-standard` from version 0.2.1 to version 1.0.0
-- updated `stylelint` peer dependency to ^14.4.0, i.e. removed support for older versions
+- updated `stylelint` peer dependency to ^14.5.1, i.e. removed support for older versions
 
 ## Linting rule changes
 
