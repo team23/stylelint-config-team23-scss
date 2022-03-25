@@ -19,7 +19,7 @@ npm:
 npm install --save-dev @team23/stylelint-config-team23-scss
 
 # specific version
-npm install --save-dev @team23/stylelint-config-team23-scss@1.0.2
+npm install --save-dev @team23/stylelint-config-team23-scss@1.0.3
 ```
 
 or using github (deprecated):
@@ -29,7 +29,7 @@ or using github (deprecated):
 npm install --save-dev github:team23/stylelint-config-team23-scss
 
 # specific version
-npm install --save-dev "github:team23/stylelint-config-team23-scss#v1.0.2"
+npm install --save-dev "github:team23/stylelint-config-team23-scss#v1.0.3"
 ```
 
 ## Usage
