@@ -1,6 +1,6 @@
 {
   "name": "@team23/stylelint-config-team23-scss",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Standard shareable config for stylelint",
   "keywords": [
     "stylelint",
@@ -19,13 +19,13 @@
     "index.js"
   ],
   "dependencies": {
+    "@team23/stylelint-config-team23-standard": "^1.0.5",
     "stylelint-config-prettier-scss": "^0.0.1",
     "stylelint-config-standard-scss": "^3.0.0"
   },
   "devDependencies": {
     "@stylelint/prettier-config": "^2.0.0",
     "@stylelint/remark-preset": "^3.0.0",
-    "@team23/stylelint-config-team23-standard": "^1.0.5",
     "eslint": "^8.11.0",
     "eslint-config-stylelint": "^15.0.0",
     "eslint-plugin-eslint-comments": "^3.2.0",

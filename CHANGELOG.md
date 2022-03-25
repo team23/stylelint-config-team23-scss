@@ -1,3 +1,7 @@
+# 1.0.3
+
+- fixes package dependencies
+
 # 1.0.2
 
 - package is now available via npm!
