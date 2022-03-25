@@ -1,3 +1,26 @@
+# 1.0.2
+
+- package is now available via npm!
+- updates package name from `stylelint-config-team23-scss` to `@team23/stylelint-config-team23-scss`
+
+Note that as the package name changed, instead of
+
+```json
+{
+  "extends": "stylelint-config-team23-scss"
+}
+```
+
+in your stylelint config, you have to use
+
+```json
+{
+  "extends": "@team23/stylelint-config-team23-scss"
+}
+```
+
+since this version.
+
 # 1.0.1
 
 - updates `stylelint` to version 14.6.0

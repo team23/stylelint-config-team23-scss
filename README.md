@@ -2,23 +2,34 @@
 
 > Standard SCSS linting config for TEAM23
 
-Rules for linting SCSS at TEAM23 with stylelint.
+Rules for linting CSS + SCSS at TEAM23 with stylelint.
 
 Extends [`stylelint-config-team23-standard`](https://github.com/team23/stylelint-config-team23-standard), which
-enables css error checking based on best practices. It further extends [`stylelint-config-standard-scss`](https://github.com/stylelint-scss/stylelint-config-standard-scss) which enables scss error checking plus some style checking rules. the stylechecking rules are disabled by also extending [`stylelint-config-prettier-scss`](https://github.com/prettier/stylelint-config-prettier-scss). Our custom ruleset is defined in the
+enables css error checking based on best practices. So if you want to lint css and scss styles, you just need this configuartion, as it includes the `stylelint-config-team23-standard` configuration.
+
+It further extends [`stylelint-config-standard-scss`](https://github.com/stylelint-scss/stylelint-config-standard-scss) which enables scss error checking plus some style checking rules. the stylechecking rules are disabled by also extending [`stylelint-config-prettier-scss`](https://github.com/prettier/stylelint-config-prettier-scss). Our custom ruleset is defined in the
 [`index.js`](./index.js).
-
-## Proposing rule changes
-
-For proposing changes to the ruleset please open either
-
-- a merge request
-- a ticket
 
 ## Installation
 
+npm:
+
 ```bash
-npm install git+https://github.com/team23/stylelint-config-team23-scss --save-dev
+# latest version
+npm install --save-dev @team23/stylelint-config-team23-scss
+
+# specific version
+npm install --save-dev @team23/stylelint-config-team23-scss@1.0.2
+```
+
+or using github (deprecated):
+
+```bash
+# latest version
+npm install --save-dev github:team23/stylelint-config-team23-scss
+
+# specific version
+npm install --save-dev "github:team23/stylelint-config-team23-scss#v1.0.2"
 ```
 
 ## Usage
@@ -27,23 +38,15 @@ If you've installed `stylelint-config-team23-scss` locally within your project, 
 
 ```json
 {
-  "extends": "stylelint-config-team23-scss"
+  "extends": "@team23/stylelint-config-team23-scss"
 }
 ```
 
-If you've globally installed `stylelint-config-team23-scss` using the `-g` flag, then you'll need to use the absolute path to `stylelint-config-team23-scss` in your config e.g.
+If you use a version prior to v1.0.2, use
 
 ```json
 {
-  "extends": "/absolute/path/to/stylelint-config-team23-scss"
-}
-```
-
-Since [stylelint 9.7.0](https://github.com/stylelint/stylelint/blob/9.7.0/CHANGELOG.md#970), you can simply use the globally installed configuration name instead of the absolute path:
-
-```json
-{
-  "extends": "stylelint-config-team23-scss"
+  "extends": "stylelint-config-team23-standard"
 }
 ```
 
@@ -55,13 +58,20 @@ For example, to change the `at-rule-no-unknown` rule to use its `ignoreAtRules` 
 
 ```json
 {
-  "extends": "stylelint-config-team23-scss",
+  "extends": "@team23/stylelint-config-team23-scss",
   "rules": {
     "scss/at-extend-no-missing-placeholder": true,
     # ...
   }
 }
 ```
+
+## Proposing rule changes
+
+For proposing changes to the ruleset please open either
+
+- a merge request
+- a ticket
 
 ## [Changelog](CHANGELOG.md)
 
