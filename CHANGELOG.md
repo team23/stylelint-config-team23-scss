@@ -1,3 +1,8 @@
+# 2.0.0
+
+- removes `stylelint` less than `14.9.0` from peer dependencies.
+- updates `stylelint-config-standard-scss` to `4.0.0`
+
 # 1.0.3
 
 - fixes package dependencies
