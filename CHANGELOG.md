@@ -1,3 +1,9 @@
+# 3.0.0
+
+- removes `stylelint` less than `14.14.0` from peer dependencies.
+- updates `stylelint-config-standard-scss` to `5.0.0`
+- updates `stylelint-config-team23-standard` to `3.0.0`
+
 # 2.0.0
 
 - removes `stylelint` less than `14.9.0` from peer dependencies.
