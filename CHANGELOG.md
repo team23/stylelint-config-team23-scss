@@ -1,3 +1,7 @@
+# 3.0.1
+
+- allow `!default` annotation
+
 # 3.0.0
 
 - removes `stylelint` less than `14.14.0` from peer dependencies.
