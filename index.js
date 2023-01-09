@@ -18,6 +18,16 @@ module.exports = {
 		'function-no-unknown': null,
 
 		/**
+		 * Disallow unknown annotations.
+		 */
+		'annotation-no-unknown': [
+			true,
+			{
+				ignoreAnnotations: ['default'],
+			},
+		],
+
+		/**
 		 * Require or disallow parentheses in argumentless @mixin calls.
 		 */
 		'scss/at-mixin-argumentless-call-parentheses': null,
