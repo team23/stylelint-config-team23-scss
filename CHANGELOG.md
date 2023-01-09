@@ -1,3 +1,8 @@
+# 3.0.2
+
+- allow `!global` annotation
+- update `stylelint-config-standard-scss` to `6.1.0`
+
 # 3.0.1
 
 - allow `!default` annotation
