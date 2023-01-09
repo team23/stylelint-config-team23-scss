@@ -44,6 +44,11 @@
     "postcss": "^8.3.3",
     "stylelint": "^14.14.0"
   },
+  "peerDependenciesMeta": {
+    "postcss": {
+      "optional": true
+    }
+  },
   "scripts": {
     "format": "prettier . --write",
     "lint:formatting": "prettier . --check",
