@@ -38,7 +38,7 @@ If you've installed `stylelint-config-team23-scss` locally within your project, 
 
 ```json
 {
-  "extends": "@team23/stylelint-config-team23-scss"
+    "extends": "@team23/stylelint-config-team23-scss"
 }
 ```
 
@@ -46,7 +46,7 @@ If you use a version prior to v1.0.2, use
 
 ```json
 {
-  "extends": "stylelint-config-team23-standard"
+    "extends": "stylelint-config-team23-standard"
 }
 ```
 
@@ -70,8 +70,8 @@ For example, to change the `at-rule-no-unknown` rule to use its `ignoreAtRules` 
 
 For proposing changes to the ruleset please open either
 
-- a merge request
-- a ticket
+-   a merge request
+-   a ticket
 
 ## [Changelog](CHANGELOG.md)
 

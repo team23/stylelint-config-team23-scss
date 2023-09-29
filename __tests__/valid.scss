@@ -3,8 +3,8 @@
 /*
   annotation-no-unknown should allow scss !default annotation
  */
-$font-family-text: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif !default;
+$font-family-text: 'Open Sans', 'Helvetica Neue', helvetica, arial, sans-serif !default;
 
 @mixin foo() {
-	border: 0;
+    border: 0;
 }

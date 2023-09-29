@@ -1,6 +1,6 @@
 {
   "name": "@team23/stylelint-config-team23-scss",
-  "version": "3.0.2",
+  "version": "4.0.0",
   "description": "Standard shareable config for stylelint",
   "keywords": [
     "stylelint",
@@ -19,30 +19,26 @@
     "index.js"
   ],
   "dependencies": {
-    "@team23/stylelint-config-team23-standard": "^3.0.0",
-    "stylelint-config-prettier-scss": "^0.0.1",
-    "stylelint-config-standard-scss": "^6.1.0"
+    "@team23/stylelint-config-team23-standard": "^4.0.0",
+    "stylelint-config-standard-scss": "^11.0.0"
   },
   "devDependencies": {
-    "@stylelint/prettier-config": "^2.0.0",
     "@stylelint/remark-preset": "^4.0.0",
     "eslint": "^8.11.0",
-    "eslint-config-stylelint": "^17.1.0",
+    "eslint-config-stylelint": "^20.0.0",
     "eslint-plugin-eslint-comments": "^3.2.0",
-    "eslint-plugin-jest": "^27.1.2",
-    "eslint-plugin-node": "^11.1.0",
     "eslint-plugin-regexp": "^1.6.0",
-    "husky": "^8.0.1",
-    "jest": "^29.3.1",
+    "husky": "^8.0.3",
+    "lint-staged": "^14.0.1",
     "npm-run-all": "^4.1.5",
-    "prettier": "^2.6.0",
-    "pretty-quick": "^3.1.3",
-    "remark-cli": "^11.0.0",
-    "stylelint": "^14.14.0"
+    "prettier": "^3.0.3",
+    "remark-cli": "^12.0.0",
+    "stylelint": "^15.10.0",
+    "vitest": "^0.34.6"
   },
   "peerDependencies": {
     "postcss": "^8.3.3",
-    "stylelint": "^14.14.0"
+    "stylelint": "^15.10.0"
   },
   "peerDependenciesMeta": {
     "postcss": {
@@ -55,12 +51,14 @@
     "lint:js": "eslint . --ignore-path .gitignore",
     "lint:md": "remark . --quiet --frail --ignore-path .gitignore",
     "lint": "npm-run-all --parallel lint:*",
-    "test": "jest",
-    "watch": "jest --watch",
-    "prepare": "husky install",
-    "pretty-quick": "pretty-quick"
+    "test": "vitest run",
+    "watch": "vitest",
+    "prepare": "husky install"
   },
-  "prettier": "@stylelint/prettier-config",
+  "lint-staged": {
+    "*.js": "eslint --cache --fix",
+    "*.{js,md,yml}": "prettier --write"
+  },
   "eslintConfig": {
     "extends": [
       "stylelint"
