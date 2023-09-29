@@ -1,3 +1,7 @@
+# 4.0.1
+
+-   disable `media-query-no-invalid` rule.
+
 # 4.0.0
 
 -   remove `stylelint` less than `15.10.0` from peer dependencies.

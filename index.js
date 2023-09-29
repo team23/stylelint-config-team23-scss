@@ -24,6 +24,11 @@ module.exports = {
         ],
 
         /**
+         * Disallow invalid media queries.
+         */
+        'media-query-no-invalid': null,
+
+        /**
          * Require or disallow parentheses in argumentless @mixin calls.
          */
         'scss/at-mixin-argumentless-call-parentheses': null,
