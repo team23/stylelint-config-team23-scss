@@ -1,10 +1,10 @@
 'use strict';
 
 import { beforeEach, describe, expect, it } from 'vitest';
+import config from '../index.js';
 import fs from 'fs';
 import stylelint from 'stylelint';
 
-const config = require('../');
 const validCss = fs.readFileSync('./__tests__/valid.scss', 'utf-8');
 const invalidCss = fs.readFileSync('./__tests__/invalid.scss', 'utf-8');
 

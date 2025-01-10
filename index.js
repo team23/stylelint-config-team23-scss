@@ -1,6 +1,6 @@
 'use strict';
 
-module.exports = {
+export default {
     extends: ['stylelint-config-standard-scss', '@team23/stylelint-config-team23-standard'],
     rules: {
         /**
