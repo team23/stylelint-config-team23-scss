@@ -28,7 +28,7 @@
         "@team23/eslint-config-team23-standard": "^9.0.3",
         "eslint": "^9.17.0",
         "stylelint": "^15.10.0",
-        "vitest": "^0.34.6"
+        "vitest": "^2.1.8"
     },
     "peerDependencies": {
         "postcss": "^8.3.3",
