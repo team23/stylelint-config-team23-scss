@@ -21,18 +21,18 @@
     ],
     "dependencies": {
         "@team23/stylelint-config-team23-standard": "^4.0.0",
-        "stylelint-config-standard-scss": "^11.0.0"
+        "stylelint-config-standard-scss": "^14.0.0"
     },
     "devDependencies": {
         "@eslint/compat": "^1.2.4",
         "@team23/eslint-config-team23-standard": "^9.0.3",
         "eslint": "^9.17.0",
-        "stylelint": "^15.10.0",
+        "stylelint": "^16.12.0",
         "vitest": "^2.1.8"
     },
     "peerDependencies": {
         "postcss": "^8.3.3",
-        "stylelint": "^15.10.0"
+        "stylelint": "^16.12.0"
     },
     "peerDependenciesMeta": {
         "postcss": {
