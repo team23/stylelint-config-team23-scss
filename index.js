@@ -20,16 +20,6 @@ export default {
         'at-rule-no-unknown': null,
 
         /**
-         * Disallow unknown functions.
-         */
-        'function-no-unknown': null,
-
-        /**
-         * Disallow invalid media queries.
-         */
-        'media-query-no-invalid': null,
-
-        /**
          * This is a rule that checks for situations where users have done a
          * loop using map-keys or map.keys and grabbed the value for that key inside of the loop.
          */
@@ -40,15 +30,12 @@ export default {
          */
         'scss/at-function-pattern': '^[a-z]+([a-z0-9-]+[a-z0-9]+)?$',
 
-        /**
-         * Disallow leading underscore in partial names in @import.
-         */
-        'scss/at-import-no-partial-leading-underscore': true,
+        'scss/at-import-no-partial-leading-underscore': null,
 
         /**
          * Specify blacklist of disallowed file extensions for partial names in @import commands.
          */
-        'scss/at-import-partial-extension-blacklist': ['scss'],
+        'scss/at-import-partial-extension-blacklist': null,
 
         /**
          * Require or disallow parentheses in argumentless @mixin calls.

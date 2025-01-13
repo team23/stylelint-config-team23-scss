@@ -3,6 +3,8 @@
 - Removed: stylelint less than 16.12.0 from peer dependencies. This introduces the following changes:
    - Only ESM syntax is now supported
    - Removed: 76 rules deprecated in 15.0.0
+   - Removed rules which are already configured by `stylint-config-scss-standard`
+   - Disabled deprecated rules `scss/at-import-no-partial-leading-underscore` and `scss/at-import-partial-extension-blacklist`
 - Updated dep: `stylelint-config-scss` from `11.0.0` to `14.0.0`. This introduces the following changes:
     - Removed: Node.js less than 18.12.0 support.
     - Changed: updated to stylelint-config-standard@36.0.0
