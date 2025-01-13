@@ -1,83 +1,66 @@
 'use strict';
 
 import { beforeEach, describe, expect, it } from 'vitest';
+import config from '../index.js';
 import fs from 'fs';
 import stylelint from 'stylelint';
 
-const config = require('../');
-const validCss = fs.readFileSync('./__tests__/valid.scss', 'utf-8');
-const invalidCss = fs.readFileSync('./__tests__/invalid.scss', 'utf-8');
+const validScss = fs.readFileSync('./__tests__/valid.scss', 'utf-8');
+const invalidScss = fs.readFileSync('./__tests__/invalid.scss', 'utf-8');
 
-describe('flags no warnings with valid css', () => {
+const expectedErrorRules = [
+    'scss/at-function-pattern',
+    'scss/at-mixin-pattern',
+    'scss/dollar-variable-pattern',
+    'scss/percent-placeholder-pattern',
+    'at-rule-empty-line-before',
+    'no-duplicate-selectors',
+];
+
+describe('flags no warnings with valid SCSS', () => {
     let result;
 
     beforeEach(() => {
         result = stylelint.lint({
-            code: validCss,
+            code: validScss,
             config,
         });
     });
 
-    it('did not error', async () => {
-        return result.then((data) => expect(data.errored).toBeFalsy());
-    });
+    it('did not error', () => result.then(
+        data => expect(data.errored).toBeFalsy(),
+    ));
 
-    it('flags no warnings', () => {
-        return result.then((data) => expect(data.results[0].warnings).toHaveLength(0));
-    });
+    it('flags no warnings', () => result.then(
+        data => expect(data.results[0].warnings).toHaveLength(0),
+    ));
 });
 
-describe('flags warnings with invalid css', () => {
+describe('flags warnings with invalid SCSS', () => {
     let result;
 
     beforeEach(() => {
         result = stylelint.lint({
-            code: invalidCss,
+            code: invalidScss,
             config,
         });
     });
 
-    it('did error', () => {
-        return result.then((data) => expect(data.errored).toBeTruthy());
-    });
+    it('should flag as errored', () => result.then(data => {
+        expect(data.errored).toBeTruthy();
+    }));
 
-    it('flags one warning', () => {
-        return result.then((data) => expect(data.results[0].warnings).toHaveLength(2));
-    });
+    it('should flag the correct number of errors', () => result.then(
+        data => {
+            const expectedErrorCount = expectedErrorRules.length;
+            const actualErrorCount = data.results[0].warnings.filter(w => w.severity === 'error').length;
+            expect(actualErrorCount).toBe(expectedErrorCount);
+        },
+    ));
 
-    it('correct warning text', () => {
-        return result.then(
-            (data) => (
-                expect(data.results[0].warnings[0].text).toBe('Unexpected unknown at-rule "@invalid" (scss/at-rule-no-unknown)'),
-                expect(data.results[0].warnings[1].text).toBe('Unexpected at-rule "debug" (at-rule-disallowed-list)')
-            ),
-        );
-    });
-
-    it('correct rule flagged', () => {
-        return result.then(
-            (data) => (
-                expect(data.results[0].warnings[0].rule).toBe('scss/at-rule-no-unknown'),
-                expect(data.results[0].warnings[1].rule).toBe('at-rule-disallowed-list')
-            ),
-        );
-    });
-
-    it('correct severity flagged', () => {
-        return result.then(
-            (data) => (
-                expect(data.results[0].warnings[0].severity).toBe('error'), expect(data.results[0].warnings[1].severity).toBe('error')
-            ),
-        );
-    });
-
-    it('correct line number', () => {
-        return result.then((data) => (expect(data.results[0].warnings[0].line).toBe(1), expect(data.results[0].warnings[1].line).toBe(3)));
-    });
-
-    it('correct column number', () => {
-        return result.then(
-            (data) => (expect(data.results[0].warnings[0].column).toBe(1), expect(data.results[0].warnings[1].column).toBe(1)),
-        );
+    it.each(expectedErrorRules)('should contain error for rule: "%s"', async rule => {
+        const _result = await result;
+        const rules = _result.results[0].warnings.map(warning => warning.rule);
+        expect(rules).toContain(rule);
     });
 });

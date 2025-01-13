@@ -22,16 +22,6 @@ npm install --save-dev @team23/stylelint-config-team23-scss
 npm install --save-dev @team23/stylelint-config-team23-scss@1.0.3
 ```
 
-or using github (deprecated):
-
-```bash
-# latest version
-npm install --save-dev github:team23/stylelint-config-team23-scss
-
-# specific version
-npm install --save-dev "github:team23/stylelint-config-team23-scss#v1.0.3"
-```
-
 ## Usage
 
 If you've installed `stylelint-config-team23-scss` locally within your project, just set your `stylelint` config to:
@@ -58,11 +48,11 @@ For example, to change the `at-rule-no-unknown` rule to use its `ignoreAtRules` 
 
 ```json
 {
-  "extends": "@team23/stylelint-config-team23-scss",
-  "rules": {
-    "scss/at-extend-no-missing-placeholder": true,
-    # ...
-  }
+    "extends": "@team23/stylelint-config-team23-scss",
+     "rules": {
+         "scss/at-extend-no-missing-placeholder": true,
+         # ...
+     }
 }
 ```
 

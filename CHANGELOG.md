@@ -1,3 +1,23 @@
+# 5.0.0
+
+- Removed: stylelint less than 16.12.0 from peer dependencies. This introduces the following changes:
+   - Only ESM syntax is now supported
+   - Removed: 76 rules deprecated in 15.0.0
+   - Removed rules which are already configured by `stylint-config-scss-standard`
+   - Disabled deprecated rules `scss/at-import-no-partial-leading-underscore` and `scss/at-import-partial-extension-blacklist`
+- Updated dep: `stylelint-config-scss` from `11.0.0` to `14.0.0`. This introduces the following changes:
+    - Removed: Node.js less than 18.12.0 support.
+    - Changed: updated to stylelint-config-standard@36.0.0
+    - Changed: updated to stylelint-config-recommended-scss@14.1.0
+    - Changed: scss/dollar-variable-colon-space-after from always to always-single-line to be compatible with the default formatting of Prettier.
+- Other changes in project:
+    - Migrated eslint to latest with flat config setup and usage of eslint-config-team23-standard
+    - Removed prettier
+    - Updated .editorconfig to use official team23 .editorconfig
+    - Removed dependencies @stylelint/remark-preset, cz-conventional-changelog, husky, lint-staged, npm-run-all
+        and remark-cli
+    - Improved tests for stylint errors
+
 # 4.0.1
 
 -   disable `media-query-no-invalid` rule.

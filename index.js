@@ -1,17 +1,8 @@
 'use strict';
 
-module.exports = {
+export default {
     extends: ['stylelint-config-standard-scss', '@team23/stylelint-config-team23-standard'],
     rules: {
-        /**
-         * Disallow unknown at-rules.
-         */
-        'at-rule-no-unknown': null,
-
-        /**
-         * Disallow unknown functions.
-         */
-        'function-no-unknown': null,
 
         /**
          * Disallow unknown annotations.
@@ -24,27 +15,13 @@ module.exports = {
         ],
 
         /**
-         * Disallow invalid media queries.
+         * Disallow unknown at-rules.
          */
-        'media-query-no-invalid': null,
+        'at-rule-no-unknown': null,
 
         /**
-         * Require or disallow parentheses in argumentless @mixin calls.
-         */
-        'scss/at-mixin-argumentless-call-parentheses': null,
-
-        /**
-         * Disallows the use of global function names, as these global functions are now located inside built-in Sass modules.
-         */
-        'scss/no-global-function-names': null,
-
-        /**
-         * Disallow parentheses in conditional @ rules (if, elsif, while)
-         */
-        'scss/at-rule-conditional-no-parentheses': null,
-
-        /**
-         * This is a rule that checks for situations where users have done a loop using map-keys or map.keys and grabbed the value for that key inside of the loop.
+         * This is a rule that checks for situations where users have done a
+         * loop using map-keys or map.keys and grabbed the value for that key inside of the loop.
          */
         'scss/at-each-key-value-single-line': true,
 
@@ -53,15 +30,17 @@ module.exports = {
          */
         'scss/at-function-pattern': '^[a-z]+([a-z0-9-]+[a-z0-9]+)?$',
 
-        /**
-         * Disallow leading underscore in partial names in @import.
-         */
-        'scss/at-import-no-partial-leading-underscore': true,
+        'scss/at-import-no-partial-leading-underscore': null,
 
         /**
          * Specify blacklist of disallowed file extensions for partial names in @import commands.
          */
-        'scss/at-import-partial-extension-blacklist': ['scss'],
+        'scss/at-import-partial-extension-blacklist': null,
+
+        /**
+         * Require or disallow parentheses in argumentless @mixin calls.
+         */
+        'scss/at-mixin-argumentless-call-parentheses': null,
 
         /**
          * Specify a pattern for Sass/SCSS-like mixin names.
@@ -69,9 +48,19 @@ module.exports = {
         'scss/at-mixin-pattern': '^[a-z]+([a-z0-9-]+[a-z0-9]+)?$',
 
         /**
+         * Disallow parentheses in conditional @ rules (if, elsif, while)
+         */
+        'scss/at-rule-conditional-no-parentheses': null,
+
+        /**
          * Specify a pattern for Sass-like variables.
          */
         'scss/dollar-variable-pattern': '^[_]?[a-z]+([a-z0-9-]+[a-z0-9]+)?$',
+
+        /**
+         * Disallows the use of global function names, as these global functions are now located inside built-in Sass modules.
+         */
+        'scss/no-global-function-names': null,
 
         /**
          * Specify a pattern for %-placeholders.
