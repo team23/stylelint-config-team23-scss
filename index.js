@@ -3,7 +3,6 @@
 export default {
     extends: ['stylelint-config-standard-scss', '@team23/stylelint-config-team23-standard'],
     rules: {
-
         /**
          * Disallow unknown annotations.
          */
@@ -18,6 +17,8 @@ export default {
          * Disallow unknown at-rules.
          */
         'at-rule-no-unknown': null,
+
+        'media-query-no-invalid': null,
 
         /**
          * This is a rule that checks for situations where users have done a

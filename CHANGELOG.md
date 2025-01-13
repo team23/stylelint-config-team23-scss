@@ -1,3 +1,7 @@
+# 5.0.1
+
+- disable `media-query-no-invalid` rule.
+
 # 5.0.0
 
 - Removed: stylelint less than 16.12.0 from peer dependencies. This introduces the following changes:
