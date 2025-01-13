@@ -1,10 +1,47 @@
-@import 'x.css';
+// Annotations
+@use 'sass:map';
 
-/*
-  annotation-no-unknown should allow scss !default annotation
- */
-$font-family-text: 'Open Sans', 'Helvetica Neue', helvetica, arial, sans-serif !default;
+// Variables
+$base-color: #333;
+$header-background: #f5f5f5;
 
-@mixin foo() {
-    border: 0;
+// Functions
+@function calculate-spacing($factor) {
+    @return $factor * 1rem;
+}
+
+// Mixins
+@mixin flex-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+// Placeholders
+%block-placeholder {
+    color: $base-color;
+}
+
+// Block
+.block {
+    @extend %block-placeholder;
+
+    background-color: $header-background;
+
+    // Element
+    &__element {
+        padding: calculate-spacing(2);
+
+        // Modifier
+        &--active {
+            font-weight: bold;
+        }
+    }
+}
+
+// No redundant nesting
+.list {
+    li {
+        color: $base-color;
+    }
 }

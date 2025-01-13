@@ -1,3 +1,42 @@
-@invalid foo;
+// Invalid Annotations
+@unknown-annotation;
 
-@debug 'foo';
+// Invalid Variables
+$BaseColor: #333; // Violates variable naming pattern
+
+// Invalid Functions
+@function CalculateSpacing($Factor) { // Violates function naming pattern
+    @return $Factor * 1rem;
+}
+
+// Invalid Mixins
+@mixin FlexCenter() { // Violates mixin naming pattern
+    display: flex;
+}
+
+// Invalid Placeholders
+%block_Placeholder { // Violates placeholder naming pattern
+    color: $BaseColor;
+}
+
+// Invalid Nesting
+.block {
+    & & { // Redundant nesting
+        &__element {
+            font-size: 16px;
+        }
+    }
+}
+
+// Invalid @each Loop
+$map: (key1: value1, key2: value2);
+@each $key, $value in map-keys($map) { // Violates scss/at-each-key-value-single-line
+    .block {
+        content: $key $value;
+    }
+}
+
+// Invalid Global Function
+.block {
+    color: test($BaseColor, 10%); // Using a global function instead of a Sass module
+}
